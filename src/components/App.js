@@ -51,12 +51,13 @@ const totalPercentage = countPositiveFeedbackPercentage();
       </Section>
        
         <Section title="Statistics">
-          {totalFeedBack !== 0 ? (
-            <Statistics good={good} 
-            neutral={neutral} 
-            bad={bad} 
-            total={getTotalFeedBack} 
-            positivePercentage={getPositiveFeedbackPercentage} />)
+          {totalFeedback !== 0 ? (
+            <Statistics 
+            good={good}
+            neutral={neutral}
+            bad={bad}
+            total={totalFeedback}
+            positivePercentage={totalPercentage} />)
             : (<Notification message="There is no feedback" />)}
         </Section>
         <RootStyle></RootStyle>
